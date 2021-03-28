@@ -11,14 +11,15 @@ export default class Modal extends Component {
     componentWillUnmount() {
        window.addEventListener('keydown', this.handleKeyDown); 
     }
+
     handleKeyDown = e => {
         if (e.code === 'Escape') {
-            this.props.onCloce();
+            this.props.onClose();
         }
     };
     handleBackdropClick = event => {
         if (event.currentTarget === event.target) {
-            this.props.onCloce()
+            this.props.onClose();
         }
     };
     render() {
@@ -35,8 +36,8 @@ export default class Modal extends Component {
 }
 
 Modal.propTypes = {
-  children: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired,
+    onClose: PropTypes.func.isRequired,
+      children: PropTypes.object.isRequired,
 };
 
 

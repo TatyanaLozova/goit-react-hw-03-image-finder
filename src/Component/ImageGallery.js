@@ -67,7 +67,7 @@ class ImageGallery extends Component {
 
   render() {
     const { images, isLoading, showModal, largeImgUrl } = this.state;
-    const shouldRenderButton = images.length > 0 && !isLoading;
+    const shouldRenderButton = images.length > 11 && !isLoading;
 
     return (
       <>
@@ -77,20 +77,20 @@ class ImageGallery extends Component {
               key={img.id}
                   imgGallery={img}
                   largeImgUrl={img.largeImageURL}
-              onHandleClick={this.handleClickImage}
+              onClick={this.handleClickImage}
             />
           ))}
         </ul>
 
         {showModal && (
-          <Modal onHandleClose={this.toggleModal}>
+          <Modal onClose={this.toggleModal}>
             <img src={largeImgUrl} alt="" />
           </Modal>
         )}
 
         {isLoading && <Loader />}
 
-        {shouldRenderButton && <Button onHandleClick={this.fetchGallery} />}
+        {shouldRenderButton && <Button onClick={this.fetchGallery} />}
       </>
     );
   }
