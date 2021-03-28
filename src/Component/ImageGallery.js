@@ -4,6 +4,7 @@ import ImageGalleryItem from "./ImageGalleryItem";
 import Button from "./Button";
 import Modal from "./Modal";
 import Loader from "./Loader";
+import s from "../App.module.css";
 
 
 
@@ -66,11 +67,11 @@ class ImageGallery extends Component {
 
   render() {
     const { images, isLoading, showModal, largeImgUrl } = this.state;
-    const shouldRenderButton = images.length > 11 && !isLoading;
+    const shouldRenderButton = images.length > 0 && !isLoading;
 
     return (
       <>
-        <ul>
+        <ul className={s.ImageGallery}>
           {images.map((img) => (
             <ImageGalleryItem
               key={img.id}

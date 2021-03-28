@@ -2,14 +2,15 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 
-export default function Button({ onClick }) {
+const Button = ({ onHandleClick }) => {
     return (
-        <button type="button" onClick={onClick}>Load more...</button>
+        <button type="button" onClick={onHandleClick}>Загрузить ещё...</button>
     );
-}
+};
 
 Button.propTypes = {
-    onClick: PropTypes.func.isRequired,
+    onHandleClick: PropTypes.func.isRequired,
 
 };
 
+export default Button;

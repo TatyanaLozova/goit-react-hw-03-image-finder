@@ -1,15 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import s from "../App.module.css";
 
 const ImageGalleryItem= ({ imgGallery, largeImgUrl, onHandleClick }) => {
   const { id, webformatURL } = imgGallery;
   return (
-    <li
+    <li className={s.ImageGalleryItem}
       
       onClick={() => onHandleClick(largeImgUrl)}
     >
-      <img src={webformatURL} alt={id} />
+      <img className={s.ImageGalleryItem_image} src={webformatURL} alt={id} />
     </li>
   );
 };
