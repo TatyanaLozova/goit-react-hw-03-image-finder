@@ -14,8 +14,9 @@ class SearchBar extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                <input
+                    <input
                     type="text"
+                     placeholder="Search images..."
                     value={this.state.query}
                     onChange={this.handleChenge}
                 />

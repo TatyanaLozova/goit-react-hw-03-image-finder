@@ -74,8 +74,8 @@ class ImageGallery extends Component {
           {images.map((img) => (
             <ImageGalleryItem
               key={img.id}
-              imgGallery={img}
-              largeImgUrl={img.largeImageURL}
+                  imgGallery={img}
+                  largeImgUrl={img.largeImageURL}
               onHandleClick={this.handleClickImage}
             />
           ))}
