@@ -83,7 +83,7 @@ class ImageGallery extends Component {
         </ul>
 
         {showModal && (
-          <Modal onClose={this.toggleModal}>
+                   <Modal onClose={this.toggleModal}> 
             <img src={largeImgUrl} alt="" />
           </Modal>
         )}
