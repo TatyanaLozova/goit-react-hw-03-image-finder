@@ -91,7 +91,7 @@ class ImageGallery extends Component {
 
         {isLoading && <Loader />}
 
-        {shouldRenderButton && <Button onClick={this.fetchGallery} />}
+        {shouldRenderButton && <Button onLoadMore={this.fetchGallery} />}
       </>
     );
   }

@@ -8,7 +8,7 @@ export default class App extends React.Component {
     return (
       <Loader
         type="Puff"
-        color="#00BFFF"
+        color="#fff"
         height={100}
         width={100}
         timeout={3000} //3 secs

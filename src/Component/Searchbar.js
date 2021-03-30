@@ -14,8 +14,10 @@ class SearchBar extends Component {
     };
     render() {
         return (
-            <form className={s.Searchbar} onSubmit={this.handleSubmit}>
-                  <button type="submit" className={s.SearchForm_Button}>
+            <header className={s.Searchbar }>
+            <form className={s.SearchForm} onSubmit={this.handleSubmit}>
+                    <button type="submit" className={s.SearchForm_button}>
+                          <span className={s.SearchForm_button_label}>Search</span>
                       </button>
                     <input className={s.SearchForm_input} 
                     type="text"
@@ -24,7 +26,8 @@ class SearchBar extends Component {
                     onChange={this.handleChenge}
                 />
 
-            </form>
+                </form>
+                 </header>
         );
     };
     
