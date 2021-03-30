@@ -18,6 +18,9 @@ body {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  background-size: cover;
+  font-size: 100%;
   background-image: url("https://www.nippon.com/ru/ncommon/contents/japan-data/369847/369847.jpg");
 }
 
