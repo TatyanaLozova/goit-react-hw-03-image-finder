@@ -5,6 +5,7 @@ import Button from "./Button";
 import Modal from "./Modal";
 import Loader from "./Loader";
 import s from "../App.module.css";
+import PropTypes from "prop-types";
 
 
 
@@ -52,7 +53,7 @@ class ImageGallery extends Component {
         })
         .catch((error) => this.setState({ error }))
         .finally(() => this.setState({ isLoading: false }));
-    }, 250);
+    }, 300);
   };
 
   toggleModal = () => {
@@ -95,4 +96,8 @@ class ImageGallery extends Component {
     );
   }
 }
+ImageGallery.propTypes = {
+  query: PropTypes.string.isRequired,
+};
+
 export default ImageGallery;
